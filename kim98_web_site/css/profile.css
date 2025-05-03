@@ -1,0 +1,19 @@
+.profile_background {
+    width: 100px;
+    height: 100px;
+}
+
+.profile_icon_wrapper {
+    width: 120px;
+    height: 120px;
+}
+
+.profile_icon {
+    width: 80px;
+    height: 80px;
+}
+
+.profile_name {
+    width: 100px;
+    height: 20px;
+}
