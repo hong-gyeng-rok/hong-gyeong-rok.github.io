@@ -191,19 +191,25 @@ main {
 }
 
 .popup_box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.8);
     background: white;
     color: black;
-    padding: 2rem;
+    padding: 2rem 2rem 1rem 2rem;
     border-radius: 10px;
     box-shadow: 1rem 1rem 20px 0 rgba(0, 0, 0, 0.3);
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
     z-index: 1000;
+    width: 90%;
+    min-width: 200px;
+    max-width: 400px;
 }
 
 .merch_popup {
@@ -233,4 +239,8 @@ input[type="checkbox"]:checked+label+.popup_box {
     min-width: 250px;
     max-width: 400px;
 
+}
+
+.popup_font_size {
+    font-size: 1rem;
 }
