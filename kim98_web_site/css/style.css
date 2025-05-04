@@ -1,4 +1,3 @@
-/* 전역 초기화 및 레이아웃 안정화 */
 *,
 *::before,
 *::after {
@@ -19,6 +18,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /* 모바일 대응 */
@@ -64,7 +68,6 @@ main {
     background-color: rgba(0, 0, 0, 0.4);
     position: absolute;
     bottom: 0;
-
 }
 
 .profile_icon {
@@ -103,7 +106,6 @@ main {
     padding: 0 1rem;
     margin-top: 0.5rem;
     margin-bottom: 1rem;
-
 }
 
 .subs_icon {
@@ -114,7 +116,6 @@ main {
 .about_icon {
     width: 30px;
     height: 30px;
-
 }
 
 /* 링크 버튼들 */
@@ -140,11 +141,9 @@ main {
     min-width: 250px;
     min-height: 2.5rem;
     position: relative;
-
 }
 
 /* 아이콘 이미지 */
-
 .icons_size {
     width: 35px;
     height: 35px;
@@ -162,6 +161,7 @@ main {
     text-decoration: none;
     font-size: 1rem;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 #bar_num_1 {
@@ -182,4 +182,55 @@ main {
 
 #bar_num_5 {
     background-color: #98BEFF;
+}
+
+.popup_trigger {
+    color: white;
+    cursor: pointer;
+    text-align: center;
+}
+
+.popup_box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: white;
+    color: black;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 1rem 1rem 20px 0 rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.merch_popup {
+    width: 90vw;
+    min-width: 250px;
+    max-width: 400px;
+}
+
+.popup_close {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked+label+.popup_box {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#merch_popup {
+    width: 100%;
+    min-width: 250px;
+    max-width: 400px;
+
 }
