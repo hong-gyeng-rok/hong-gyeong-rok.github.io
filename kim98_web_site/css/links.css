@@ -120,6 +120,8 @@
         width: 90%;
         min-width: 200px;
         max-width: 400px;
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
 
     .popup_close {
