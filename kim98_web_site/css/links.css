@@ -124,8 +124,13 @@
         overflow-wrap: break-word;
         max-height: 80vh;
         overflow-y: auto;
-
+        text-align: left;
+        overflow-x: hidden;
     }
+
+.popup_box * {
+    white-space: normal !important;
+}
 
     .popup_close {
         position: absolute;
