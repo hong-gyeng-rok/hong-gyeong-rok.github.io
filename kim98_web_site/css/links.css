@@ -128,9 +128,9 @@
         overflow-x: hidden;
     }
 
-.popup_box * {
-    white-space: normal !important;
-}
+    .popup_box * {
+        white-space: normal !important;
+    }
 
     .popup_close {
         position: absolute;
