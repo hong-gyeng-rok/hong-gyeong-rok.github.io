@@ -15,10 +15,13 @@
     <main>
         <!-- 프로필 영역 -->
         <section id="profile" class="profile">
-            <div class="profile_background">
-                <img src="kim98_web_site/new_images/site_banner_img.jpg" alt="Baseball banner" class="banner_img" />
+            <div class="profile_banner">
+                <!--
+                    <img src="kim98_web_site/kim98_images/banner_images/baseball_banner_img_1.jpg" alt="Baseball banner" class="banner_img" >
+                -->
+                <div class="banner_img" id="imageBox"></div>
                 <div class="profile_icon_wrapper">
-                    <img src="kim98_web_site/kim98_images/profile_icon.png" alt="프로필 아이콘" class="profile_icon" />
+                    <img src="kim98_web_site/kim98_images/icons_op_0/profile_icon.png" alt="프로필 아이콘" class="profile_icon" />
                     <p class="profile_name">@kimgupall_98</p>
                 </div>
             </div>
@@ -31,27 +34,28 @@
                 <!-- sub popup area -->
                 <div id="subs_popup" class="popup_section">
                     <a href="http://pf.kakao.com/_QGyxnn">
-                        <img src="kim98_web_site/new_images/subs_icon.png" alt="구독" class="subs_icon">
+                        <img src="kim98_web_site/kim98_images/icons_op_0/subs_icon.png" alt="구독" class="subs_icon">
                     </a>
                 </div>
                 <!--홍보 배너-->
-                <div class="alret_benner">
+                <div class="alret_banner">
                     <p>작가 굿즈 출시 많은 관심 부탁드립니다.</p>
                     <p>'Merch is here' 클릭하면 굿즈 샵으로 이동합니다.</p>
                 </div>
                 <!--about popup area -->
                 <section id="about_popup" class="popup_section">
-                    <input type="checkbox" id="about_toggle" hidden>
-                    <label for="about_toggle" class="popup_trigger">
-                        <img src="kim98_web_site/new_images/about_icon.png" alt="About" class="about_icon">
-                    </label>
+                    <button class="about_btn popup_open">
+                        <img src="kim98_web_site/kim98_images/icons_op_0/about_icon.png" alt="About" class="about_icon">
+                    </button>
                     <!--about popup box -->
                     <div class="popup_box">
-                        <label for="about_toggle" class="popup_close">✕</label>
+                        <button class="about_btn popup_close">
+                            <img src="kim98_web_site/kim98_images/icons_op_0/backwrod_icon.png" alt = "backwrod" class="backwrod_icon">
+                        </button>
                         <h1>About</h1>
                         <p class="popup_font_size">안녕하세요.</p>
                         <p class="popup_font_size">젊음을 그리는 일러스트 작가 김98의 공식 홈페이지입니다. </p>
-                        <p class="popup_font_size">옷과 관련된 문의, 협업 관련 문의는 dm 또는 메일로 문의주시면 감사하겠습니다.</p>
+                        <p class="popup_font_size">옷과 관련된 문의, 협업 관련 문의는 DM 또는 메일로 문의 부탁드립니다.</p>
                         <p class="popup_font_size">
                             E-mail adress: kimgupall98@gmail.com
                         </p>
@@ -61,38 +65,40 @@
             <!-- 바 링크 영역 -->
             <div class="links_bars">
                 <!-- instagram bar -->
-                <div id="bar_num_1" class="bar_style">
-                    <img src="kim98_web_site/new_images/instagram_icon.png" alt="Instagram 아이콘"
+                <div id="instagram_bar" class="bar_style">
+                    <img src="kim98_web_site/kim98_images/icons_op_0/instagram_icon.png" alt="Instagram 아이콘"
                         class="icons_size icons_style" />
                     <a href="https://www.instagram.com/kimgupall_98" class="bar_text">Instagram is here!!</a>
                 </div>
                 <!-- naver bar -->
-                <div id="bar_num_2" class="bar_style">
-                    <img src="kim98_web_site/new_images/naver_icon.png" alt="Naver 아이콘"
+                <div id="naver_bar" class="bar_style">
+                    <img src="kim98_web_site/kim98_images/icons_op_0/naver_icon.png" alt="Naver 아이콘"
                         class="icons_size icons_style" />
                     <a href="https://blog.naver.com/kimgupall_98" class="bar_text">Naver blog is here!!</a>
                 </div>
                 <!-- notefolio bar -->
-                <div id="bar_num_3" class="bar_style">
+                <div id="notefolio_bar" class="bar_style">
                     <img src="kim98_web_site/kim98_images/icons/notefolio_icon.png" alt="Notefolio 아이콘"
                         class="icons_size icons_style" />
                     <a href="https://notefolio.net/kimgupall98" class="bar_text">Notefolio is here!!</a>
                 </div>
                 <!-- pinterest bar -->
-                <div id="bar_num_4" class="bar_style">
-                    <img src="kim98_web_site/new_images/pinterast_icon.png" alt="Pinterest 아이콘"
+                <div id="pinterast_bar" class="bar_style">
+                    <img src="kim98_web_site/kim98_images/icons_op_0/pinterast_icon.png" alt="Pinterest 아이콘"
                         class="icons_size icons_style" />
                     <a href="https://kr.pinterest.com/kimgupall98/" class="bar_text">Pinterest is here!!</a>
                 </div>
                 <!-- merch bar -->
-                <div id="bar_num_5" class="bar_style">
-                    <img src="kim98_web_site/new_images/shopping_icon.png" alt="Merch icon" alt="Merch 아이콘"
+                <div id="merch_bar" class="bar_style">
+                    <img src="kim98_web_site/kim98_images/icons_op_0/shopping_icon.png" alt="Merch icon" alt="Merch 아이콘"
                         class="icons_size icons_style">
                     <a href="https://naver.me/53lmTjmx" class="bar_text">Merch is here!!</a>
                 </div>
             </div>
         </section>
     </main>
+    <script src="kim98_web_site/js/banner_images.js"></script>
+    <script src="kim98_web_site/js/popup.js"></script>
 </body>
 
 </html>
