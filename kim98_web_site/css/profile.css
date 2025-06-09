@@ -1,5 +1,5 @@
 /* 프로필 영역 */
-.profile_background {
+.profile_banner {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +10,11 @@
 
 .banner_img {
     width: 90%;
-    max-height: 360px;
+    height: 360px;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1.5s ease-in-out;
+    opacity: 1;
 }
 
 .profile_icon_wrapper {
