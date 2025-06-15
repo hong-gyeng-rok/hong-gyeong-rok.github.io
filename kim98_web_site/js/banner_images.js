@@ -1,41 +1,42 @@
-const images = [
-    /*
-    "url('kim98_web_site/kim98_images/banner_images/baseball_banner_img_1.jpg')",
-    */
-    "url('kim98_web_site/kim98_images/banner_images/baseball_banner_img_2.jpg')",
-    "url('kim98_web_site/kim98_images/banner_images/baseball_banner_img_3.jpg')",
-    "url('kim98_web_site/kim98_images/banner_images/baseball_banner_img_4.jpg')",
-];
-/*
-let index = 0;
+import { images } from "./imageData.js";
 
-const bannerImage = document.getElementsByClassName("banner_img");
+// 첫 이미지 보여주기
+export function initialImage(imageBox, indexRef, keys) {
+  if (!keys.length || !imageBox) {
+    console.warn("이미지 key 배열 또는 imageBox가 유효하지 않음");
+    return;
+  }
 
-function rotateBanner() {
-    bannerImage.style.backgroundImage = images[index];
-index = (index+1) % images.length;
-}
-setInterval(rotateBanner, 3000);
-*/
-const imageBox = document.getElementById("imageBox");
-let index = 0;
+  const key = keys[indexRef.value];
+  const imageUrl = images[key];
 
-function changeImage() {
-  imageBox.style.backgroundImage = images[index];
-  index = (index + 1) % images.length;
+  if (!imageUrl) {
+    console.warn(`첫 이미지 로드 실패: key=${key}`);
+    return;
+  }
+
+  imageBox.style.backgroundImage = `url('${imageUrl}')`;
 }
 
-function changeImage() {
-  // 1단계: fade out
+// 이미지 전환 함수 (fade 효과 포함)
+export function changeImage(imageBox, indexRef, keys) {
+  if (!keys.length || !imageBox) {
+    console.warn("이미지 key 배열 또는 imageBox가 유효하지 않음");
+    return;
+  }
+
+  indexRef.value = (indexRef.value + 1) % keys.length;
+  const key = keys[indexRef.value];
+  const imageUrl = images[key];
+
+  if (!imageUrl) {
+    console.warn(`이미지 전환 실패: key=${key}`);
+    return;
+  }
+
   imageBox.style.opacity = 0;
-
-  // 2단계: 이미지 교체 + fade in (약간의 시간 차 줌)
   setTimeout(() => {
-    imageBox.style.backgroundImage = images[index];
+    imageBox.style.backgroundImage = `url('${imageUrl}')`;
     imageBox.style.opacity = 1;
-    index = (index + 1) % images.length;
-  }, 1500); // fade-out 시간과 동일하게 맞추기 (1s)
+  }, 1500);
 }
-
-changeImage(); // 첫 이미지 설정
-setInterval(changeImage, 10000); // 10초마다 이미지 변경

@@ -1,0 +1,11 @@
+.loader{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 50%;
+}
+
+.loader_font{
+    font-size: 5rem;
+    font-weight: 300;
+}
