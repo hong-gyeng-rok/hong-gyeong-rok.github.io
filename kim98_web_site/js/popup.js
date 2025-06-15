@@ -1,19 +1,13 @@
-const popupBox = document.querySelector(".popup_box");
-const popupOpen = document.querySelector(".popup_open");
-const popupClose = document.querySelector(".popup_close");
+export function oppenPopup(popupTarget){
+  popupTarget.open.addEventListener("click", () =>{
+      popupTarget.box.style.display = "block";
+      popupTarget.box.style.opacity = 1;
+  });
+}
 
-/*
-popupBtn.addEventListener("click", () => {
-  popupBox.classList.toggle("active");
-});
-*/
-
-popupOpen.addEventListener("click", () =>{
-    popupBox.style.display = "block";
-    popupBox.style.opacity = 1;
-});
-
-popupClose.addEventListener("click", () => {
-    popupBox.style.display = "none";
-    popupBox.style.opacity = 0;
-});
+export function closePopup(popupTarget){
+  popupTarget.close.addEventListener("click", () => {
+      popupTarget.box.style.display = "none";
+      popupTarget.box.style.opacity = 0;
+  });
+}

@@ -1,5 +1,6 @@
 .alret_banner {
     font-size: 1rem;
+    font-weight: 600;
 }
 
 .alret_banner:nth-child(2) {
@@ -14,6 +15,7 @@
     max-height: 700px;
     width: 100%;
     height: auto;
+    font-weight: 200;
 }
 
 /* 아이콘 링크 */
@@ -70,7 +72,6 @@
     left: 0;
     margin-left: 1rem;
 }
-
 /* 링크 텍스트 */
 .bar_text, .popup_box {
     color: white;
