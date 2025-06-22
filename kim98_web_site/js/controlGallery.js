@@ -20,16 +20,3 @@ export function exitGallery(galleryTarget){
         galleryTarget.slider.style.display = "none"; 
     })
 }
-
-
-/**
-const galleryTarget = {
-  into: goToGallery, //매인 페이지 갤러리 진입 버튼 
-  Grid:changeGalleryStyleGrid, // 그리드 버튼
-  slider:changeGalleryStyleSlider, // 슬라이더 버튼
-  exit: galleryExit, // exit 버튼
-  show: showGallery, // 갤러리 색션 
-  grid: galleryStyleGrid, // 갤러리 그리드 색션
-  slider: galleryStyleSlider // 갤러리 슬라이더 색션
-}; 
- */
