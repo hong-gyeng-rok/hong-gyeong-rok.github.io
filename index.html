@@ -9,19 +9,18 @@
         <link rel="stylesheet" href="kim98_web_site/css/style.css" />
         <link rel="stylesheet" href="kim98_web_site/css/loader.css" />
         <link rel="stylesheet" href="kim98_web_site/css/profile.css" />
+        <link rel="stylesheet" href="kim98_web_site/css/popup.css" />
         <link rel="stylesheet" href="kim98_web_site/css/links.css" />
+        <link rel="stylesheet" href="kim98_web_site/css/gallery.css" />
     </head>
     <body>
         <section id="loader" class="loader">
-            <p class="loader_font">Loading...</p>
+            <p class="loader_text">Loading...</p>
         </section>
         <main id="main">
             <!-- 프로필 영역 -->
             <section id="profile" class="profile">
                 <div class="profile_banner">
-                    <!--
-                        <img src="kim98_web_site/kim98_images/banner_images/baseball_banner_img_1.jpg" alt="Baseball banner" class="banner_img" >
-                    -->
                     <div class="banner_img" id="imageBox"></div>
                     <div class="profile_icon_wrapper">
                         <img src="kim98_web_site/kim98_images/icons_op_0/profile_icon.png" alt="프로필 아이콘" class="profile_icon" />
@@ -39,17 +38,21 @@
                         <a href="http://pf.kakao.com/_QGyxnn">
                             <img src="kim98_web_site/kim98_images/icons_op_0/subs_icon.png" alt="구독" class="subs_icon">
                         </a>
+                        <!--구독 아이콘 문구-->
+                        <p>Subs</p> 
                     </div>
-                    <!--홍보 배너-->
-                    <div class="alret_banner">
-                        <p>작가 굿즈 출시 많은 관심 부탁드립니다.</p>
-                        <p>'Merch is here' 클릭하면 굿즈 샵으로 이동합니다.</p>
+                    <!--전시회 아이콘-->
+                    <div class="gallery">
+                        <img src="kim98_web_site/kim98_images/icons_op_0/album_icon.png" alt="gallery_icon" class="gallery_icon">
+                        <p>Gallery</p>
                     </div>
                     <!--about popup area -->
                     <section id="about_popup" class="popup_section">
                         <button class="about_btn popup_open">
                             <img src="kim98_web_site/kim98_images/icons_op_0/about_icon.png" alt="About" class="about_icon">
                         </button>
+                        <!--구독 아이콘 문구-->
+                        <p>About</p>
                         <!--about popup box -->
                         <div class="popup_box">
                             <button class="about_btn popup_close">
@@ -73,11 +76,11 @@
                             class="icons_size icons_style" />
                         <a href="https://www.instagram.com/kimgupall_98" class="bar_text">Instagram is here!!</a>
                     </div>
-                    <!-- naver bar -->
-                    <div id="naver_bar" class="bar_style">
-                        <img src="kim98_web_site/kim98_images/icons_op_0/naver_icon.png" alt="Naver 아이콘"
-                            class="icons_size icons_style" />
-                        <a href="https://blog.naver.com/kimgupall_98" class="bar_text">Naver blog is here!!</a>
+                    <!-- merch bar -->
+                    <div id="merch_bar" class="bar_style">
+                        <img src="kim98_web_site/kim98_images/icons_op_0/shopping_icon.png" alt="Merch icon" alt="Merch 아이콘"
+                            class="icons_size icons_style">
+                        <a href="https://naver.me/53lmTjmx" class="bar_text">Merch is here!!</a>
                     </div>
                     <!-- notefolio bar -->
                     <div id="notefolio_bar" class="bar_style">
@@ -91,12 +94,30 @@
                             class="icons_size icons_style" />
                         <a href="https://kr.pinterest.com/kimgupall98/" class="bar_text">Pinterest is here!!</a>
                     </div>
-                    <!-- merch bar -->
-                    <div id="merch_bar" class="bar_style">
-                        <img src="kim98_web_site/kim98_images/icons_op_0/shopping_icon.png" alt="Merch icon" alt="Merch 아이콘"
-                            class="icons_size icons_style">
-                        <a href="https://naver.me/53lmTjmx" class="bar_text">Merch is here!!</a>
+                </div>
+            </section>
+            <!--전시회 섹션-->
+            <section id="gallery_section" class="gallery_section">
+                <select id="seasonSelect">
+                    <option value="24year-24S/S">24S/S</option>
+                    <option value="24year-24F/W">24F/W</option>
+                    <option value="25year-25S/S" selected>25S/S</option>
+                </select>
+
+                <!-- 그리드 스타일 전시회 -->
+                <div id="gallery_grid" class="gallery_grid">
+                    <div id="gallery_container_grid" class="gallery_container_grid">
                     </div>
+                </div>
+
+                <!-- 슬라이더 스타일 전시회 -->
+                <div id="gallery_slider" class="gallery_slider">
+                </div>
+
+                <div id="gallery_navigation_bar" class="gallery_navigation_bar">
+                    <button id="gallery_style_grid">Grid</button>
+                    <button id="gallery_style_slider">Slider</button>
+                    <button id="gallery_exit">Exit</button>
                 </div>
             </section>
         </main>

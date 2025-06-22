@@ -1,0 +1,55 @@
+/*
+
+.popup_box {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    background: white;
+    color: black;
+    padding: 2rem 2rem 3rem 2rem;
+    border-radius: 10px;
+    box-shadow: 1rem 1rem 20px 0 rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    z-index: 100;
+    width: 90%;
+    min-width: 200px;
+    max-width: 400px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    max-height: 80vh;
+    overflow-y: auto;
+    text-align: left;
+    font-weight: 300;
+}
+
+.popup_box p:last-of-type {
+    font-weight: 500;
+    position: absolute;
+    bottom: 0.5rem;
+}
+
+.popup_box * {
+    white-space: normal !important;
+}
+
+.backwrod_icon{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.popup_font_size {
+    font-size: 1rem;
+}
+
+*/
