@@ -45,11 +45,11 @@ export function handleLoad(indexRef, totalToLoad, loader, main){
     if(count === totalToLoad){
         loader.style.display ="none";
         main.style.display = "block";
-        //setTimeout( alertMessage, 100); //인터벌 발생으로 메인 페이지 다 로딩된 후 알림창 발생
+        setTimeout( alertMessage, 100); //인터벌 발생으로 메인 페이지 다 로딩된 후 알림창 발생
     }
 }
 // 알림 함수
 function alertMessage(){
-    alert("작가 굿즈 출시!! 'Merch is here!!'클릭해주세요!");
+    alert("작가 굿즈 출시!! 'Merch is here!!'클릭해주세요!\n작가 전시회 페이지 추가! 'Gallery 클릭해주세요!'");
 
 }

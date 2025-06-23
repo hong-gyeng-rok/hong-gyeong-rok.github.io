@@ -50,7 +50,6 @@ const galleryTarget = {
 const preloadUrls = keys.map((key) => images[key]); // 딕셔너리 => URL 배열
 preloadImage(preloadUrls, indexRef, totalToLoad, loader, main); // 인자 통합 방식으로
 handleLoad(indexRef, totalToLoad, loader, main);
-//setTimeout(alertMessage(), 1000);
 
 //갤러리 이미지 삽입, div, class 삽입 함수 form gallery_grid_style.js
 initGallery();
