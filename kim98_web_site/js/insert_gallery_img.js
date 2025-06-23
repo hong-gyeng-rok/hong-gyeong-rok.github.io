@@ -15,6 +15,9 @@
 - 시즌 전환 시 fade 효과 고현
 - 선택된 시즌 상태 저장(localStorage 등) 추후 확장 가능
 - double과 같은 사이즈 다른 이미지 삽입 및 스타일 분기 설정하기
+
+// 본 파일은 ChatGPT의 도움을 받아 자동 생성된 코드로,
+// 주요 로직은 AI 기반 초안이며, 이후 리팩토링 및 최적화할 예정입니다.
 */
 
 import { galleryImages } from "./imageData.js";

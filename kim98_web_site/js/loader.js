@@ -50,6 +50,6 @@ export function handleLoad(indexRef, totalToLoad, loader, main){
 }
 // 알림 함수
 function alertMessage(){
-    alert("작가 굿즈 출시!! 'Merch is here!!'클릭해주세요!\n작가 전시회 페이지 추가! 'Gallery 클릭해주세요!'");
+    alert("작가 굿즈 출시!!\n'Merch is here!!'클릭해주세요!\n작가 전시회 페이지 추가!\n'Gallery 클릭해주세요!'");
 
 }
