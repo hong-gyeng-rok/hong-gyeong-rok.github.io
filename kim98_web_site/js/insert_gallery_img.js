@@ -29,6 +29,14 @@ function renderSeason(seasonData, containerId, seasonStyle) {
     div.style.backgroundImage = `url('${item.url}')`;
     container.appendChild(div);
   });
+  
+  const singleImg = document.querySelectorAll(".single_img");
+    singleImg.forEach((img, index) => {
+      setTimeout(() => {
+        img.classList.add("show");
+      }, index * 100); // 순차적으로 페이드 인
+});
+
 }
 
 function handleSeasonChange() {
@@ -38,6 +46,8 @@ function handleSeasonChange() {
   const seasonStyle = season.includes("S/S") ? "ss-style" : "fw-style";
   renderSeason(seasonData, "gallery_container", seasonStyle);
 }
+
+
 
 
 export function initGallery() {
