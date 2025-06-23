@@ -36,7 +36,7 @@ function handleSeasonChange() {
   const [year, season] = val.split("-");
   const seasonData = galleryImages[year][season];
   const seasonStyle = season.includes("S/S") ? "ss-style" : "fw-style";
-  renderSeason(seasonData, "gallery_container_grid", seasonStyle);
+  renderSeason(seasonData, "gallery_container", seasonStyle);
 }
 
 

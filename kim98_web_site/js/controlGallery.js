@@ -3,11 +3,10 @@ const links = document.querySelector(".links");
 
 export function intoGalley(galleryTarget){
     galleryTarget.into.addEventListener("click", () =>{
-        galleryTarget.show.style.display = "flex";
+        galleryTarget.show.style.display = "block";
         if (profile) profile.style.display = "none";
         if (links) links.style.display = "none";
         galleryTarget.grid.style.display = "block";
-        galleryTarget.slider.style.display = "none";
     });
 }
 
@@ -15,8 +14,7 @@ export function exitGallery(galleryTarget){
     galleryTarget.exit.addEventListener("click", () =>{
        galleryTarget.show.style.display = "none";
         if (profile) profile.style.display = "block";
-        if (links) links.style.display = "block";
+        if (links) links.style.display = "flex";
         galleryTarget.grid.style.display = "none";
-        galleryTarget.slider.style.display = "none"; 
     })
 }

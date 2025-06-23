@@ -2,7 +2,7 @@ import { images, galleryImages } from "./imageData.js";
 import { initialImage, changeImage } from "./banner_images.js";
 import { oppenPopup, closePopup } from "./popup.js";
 import { preloadImage, handleLoad } from "./loader.js";
-import { initGallery} from "./gallery_grid_style.js";
+import { initGallery} from "./insert_gallery_img.js";
 import { intoGalley, exitGallery } from "./controlGallery.js";
 
 // 전역 변수
@@ -27,13 +27,12 @@ const main = document.getElementById("main");
 const totalToLoad = keys.length;
 
 //controlGallery 기본 값 세팅
-const goToGallery = document.querySelector(".gallery");//매인 페이지 갤러리 진입 버튼
+const goToGallery = document.querySelector(".gallery_icon");//매인 페이지 갤러리 진입 버튼
 const changeGalleryStyleGrid = document.querySelector("#gallery_style_grid");// 그리드 버튼
 const changeGalleryStyleSlider = document.querySelector("#gallery_style_slider"); // 슬라이더 버튼
 const galleryExit = document.querySelector("#gallery_exit"); // exit 버튼
 const showGallery = document.querySelector(".gallery_section"); // 갤러리 색션 
-const galleryStyleGrid = document.querySelector(".gallery_grid"); // 갤러리 그리드 색션
-const galleryStyleSlider = document.querySelector(".gallery_slider"); // 갤러리 슬라이더 색션
+const galleryStyleGrid = document.querySelector(".gallery"); // 갤러리 그리드 색션
 
 //갤러리 argument dict 구조화
 const galleryTarget = {
@@ -43,7 +42,6 @@ const galleryTarget = {
   exit: galleryExit, // exit 버튼
   show: showGallery, // 갤러리 색션 
   grid: galleryStyleGrid, // 갤러리 그리드 색션
-  slider: galleryStyleSlider // 갤러리 슬라이더 색션
 };
 
 //loder 함수
