@@ -6,7 +6,6 @@ export function intoGalley(galleryTarget){
         galleryTarget.show.style.display = "flex";
         if (profile) profile.style.display = "none";
         if (links) links.style.display = "none";
-        galleryTarget.container.style.display = "grid";
         classAddStyleGrid(galleryTarget);
     });
 }
