@@ -50,6 +50,5 @@ function classAddStyleSlider(galleryTarget){
     const items = galleryTarget.container.querySelectorAll("div");
     items.forEach(div => {
         div.classList.add("slide_item", "show"); // show도 같이 줘야 opacity: 1로 보임
-        div.classList.remove("single_img"); // grid 전용 클래스 제거
     });
 }
