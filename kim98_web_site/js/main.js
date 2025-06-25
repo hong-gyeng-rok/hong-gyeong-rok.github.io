@@ -42,7 +42,7 @@ const galleryTarget = {
   slider:changeGalleryStyleSlider, // 슬라이더 버튼
   exit: galleryExit, // exit 버튼
   show: showGallery, // 갤러리 색션 
-  container: galleryContainer, // 갤러리 이미지 컨테이너 자식
+  container: galleryContainer, // 갤러리 이미지 컨테이너 (자식)
   wrapper :galleryWrapper //갤러리 이미지 컨테이너 부모
 };
 
