@@ -53,6 +53,10 @@
     position: relative;
 }
 
+.bar_style:hover{
+    opacity: 0.5;
+}
+
 /* 아이콘 이미지 */
 .icons_size {
     width: 35px;
@@ -72,6 +76,8 @@
     white-space: nowrap;
     cursor: pointer;
 }
+
+
 /* 바 링크 색상 */
 #instagram_bar {
     background-color: #0025D9;

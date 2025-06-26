@@ -1,0 +1,57 @@
+.popup_modal{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.modal_area{
+    width: 50%;
+    height: 10rem;
+    max-width: 480px;
+    min-width: 300px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    gap: 1rem;
+    background-color: white;
+    border-radius: 1rem;
+    border: solid 1px;
+}
+
+.merch_ment, .gallery_ment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+}
+
+.gallery_icon_modal, .merch_icon_modal{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.modal_close{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin-left: auto;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    border-radius: 5px;
+}
+
+.modal_close:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.style_hover:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}

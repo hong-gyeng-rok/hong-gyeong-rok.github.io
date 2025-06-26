@@ -39,3 +39,7 @@ h1 {
         padding: 0rem 1rem 0 1rem;
     }
 }
+
+.style_blur{
+    filter: blur(1rem);
+}

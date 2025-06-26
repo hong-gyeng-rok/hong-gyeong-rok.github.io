@@ -26,6 +26,8 @@ preloader 기능 구현하기
 // 5. loading 스타일 변경, main 스타일 변경 (opacity 값 조정)
 //      5-1. 최종값 loding.style.opacity = 0, main.style.oacity = 1;
 //loader.style.display ="flex";
+const main = document.getElementById("main");
+
 //기본값 main 페이지 none
 main.style.display = "none";
 
@@ -45,11 +47,5 @@ export function handleLoad(indexRef, totalToLoad, loader, main){
     if(count === totalToLoad){
         loader.style.display ="none";
         main.style.display = "block";
-        setTimeout( alertMessage, 100); //인터벌 발생으로 메인 페이지 다 로딩된 후 알림창 발생
     }
-}
-// 알림 함수
-function alertMessage(){
-    alert("작가 굿즈 출시!!\n'Merch is here!!'클릭해주세요!\n작가 전시회 페이지 추가!\n'Gallery 클릭해주세요!'");
-
 }

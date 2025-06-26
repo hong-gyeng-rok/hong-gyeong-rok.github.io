@@ -12,19 +12,20 @@ const galleryTarget = {
 
  */
 
-const profile = document.querySelector(".profile");
-const links = document.querySelector(".links");
 
-export function intoGalley(galleryTarget){
+
+
+export function intoGalley(galleryTarget, profile, links){
     galleryTarget.into.addEventListener("click", () =>{
         galleryTarget.show.style.display = "flex";
-        if (profile) profile.style.display = "none";
+        galleryTarget.container.style.display = "grid";
+        if(profile) profile.style.display = "none";
         if (links) links.style.display = "none";
         classAddStyleGrid(galleryTarget);
     });
 }
 
-export function exitGallery(galleryTarget){
+export function exitGallery(galleryTarget, profile, links){
     galleryTarget.exit.addEventListener("click", () =>{
        galleryTarget.show.style.display = "none";
         if (profile) profile.style.display = "block";
@@ -45,7 +46,7 @@ export function changeStyleSlider(galleryTarget){
     })
 }
 
-function classAddStyleGrid(galleryTarget){
+export function classAddStyleGrid(galleryTarget){
     galleryTarget.container.classList.add("grid_gallery");
     galleryTarget.wrapper.classList.remove("slider_gallery");
 

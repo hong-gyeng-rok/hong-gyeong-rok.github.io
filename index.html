@@ -8,16 +8,45 @@
         <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
         <link rel="stylesheet" href="kim98_web_site/css/style.css" />
         <link rel="stylesheet" href="kim98_web_site/css/loader.css" />
+        <link rel="stylesheet" href="kim98_web_site/css/popup_modal.css" />
         <link rel="stylesheet" href="kim98_web_site/css/profile.css" />
         <link rel="stylesheet" href="kim98_web_site/css/popup.css" />
         <link rel="stylesheet" href="kim98_web_site/css/links.css" />
         <link rel="stylesheet" href="kim98_web_site/css/gallery.css" />
     </head>
     <body>
+        <!--로딩 페이지-->
         <section id="loader" class="loader">
             <p class="loader_text">Loading...</p>
         </section>
-        <main id="main">
+        <!--팝업 모달창-->
+        <section id="popup_modal" class="popup_modal">
+            <div id="modal_area" class="modal_area">
+                <!--close 버튼-->
+                <button class=" modal_close">
+                    <img src="kim98_web_site/kim98_images/icons_op_0/backwrod_icon.png" alt = "backwrod" class=" icons_size">
+                </button>
+                <!--굿즈 출시 맨트 및 굿즈샵 이동 아이콘 파트-->
+                <div id="merch_ment" class="merch_ment">
+                    <!--굿즈 맨트 및 아이콘 모음-->
+                    <p>작가 굿즈 출시 클릭시 이동! </p> <img src="/kim98_web_site/kim98_images/icons_op_0/arrow_slim.png" alt="화살표 아이콘" class="icons_size "/> 
+                    <button class=" merch_icon_modal">
+                        <a href="https://naver.me/53lmTjmx" target="_blank">
+                                <img src="kim98_web_site/kim98_images/icons_op_0/shopping_icon.png" alt="Merch icon" alt="Merch 아이콘"class="icons_size style_hover  ">
+                        </a>
+                    </button>    
+                </div>
+                <!--전시회 출시 멘트 및 이동 아이콘-->
+                <div id="gallery_ment" class="gallery_ment">
+                    <!--전시회 맨트 및 아이콘 모음-->
+                    <p>전시회 페이지 출시 클릭시 이동!</p> <img src="/kim98_web_site/kim98_images/icons_op_0/arrow_slim.png" alt="화살표 아이콘" class="icons_size"/>
+                    <button class="gallery_icon_modal">
+                        <img src="kim98_web_site/kim98_images/icons_op_0/album_icon.png" alt="gallery_icon" class="gallery_icon_modal icons_size style_hover">
+                    </button> 
+                </div>
+            </div>
+        </section>
+        <main id="main" class="style_blur">
             <!-- 프로필 영역 -->
             <section id="profile" class="profile">
                 <div class="profile_banner">
@@ -51,7 +80,6 @@
                         <button class="about_btn popup_open">
                             <img src="kim98_web_site/kim98_images/icons_op_0/about_icon.png" alt="About" class="about_icon">
                         </button>
-                        <!--구독 아이콘 문구-->
                         <p>About</p>
                         <!--about popup box -->
                         <div class="popup_box">
@@ -74,19 +102,19 @@
                     <div id="instagram_bar" class="bar_style">
                         <img src="kim98_web_site/kim98_images/icons_op_0/instagram_icon.png" alt="Instagram 아이콘"
                             class="icons_size icons_style" />
-                        <a href="https://www.instagram.com/kimgupall_98" class="bar_text">Instagram is here!!</a>
+                        <a href="https://www.instagram.com/kimgupall_98"  class="bar_text">Instagram is here!!</a>
                     </div>
                     <!-- merch bar -->
                     <div id="merch_bar" class="bar_style">
                         <img src="kim98_web_site/kim98_images/icons_op_0/shopping_icon.png" alt="Merch icon" alt="Merch 아이콘"
                             class="icons_size icons_style">
-                        <a href="https://naver.me/53lmTjmx" class="bar_text">Merch is here!!</a>
+                        <a href="https://naver.me/53lmTjmx" class="bar_text" >Merch is here!!</a>
                     </div>
                     <!-- notefolio bar -->
                     <div id="notefolio_bar" class="bar_style">
                         <img src="kim98_web_site/kim98_images/icons_op_0/notefolio_4.png" alt="Notefolio 아이콘"
                             class="icons_size icons_style notefolio_style" />
-                        <a href="https://notefolio.net/kimgupall98" class="bar_text">Notefolio is here!!</a>
+                        <a href="https://notefolio.net/kimgupall98"  class="bar_text">Notefolio is here!!</a>
                     </div>
                     <!-- pinterest bar -->
                     <div id="pinterast_bar" class="bar_style">

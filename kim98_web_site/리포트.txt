@@ -1,0 +1,30 @@
+ 갤러리 진입 후 Exit 버튼 통해 메인 페이지 진입 후 다시 갤러리 진입 시 이미지 안보이는 버그 발생
+ 
+해결
+Exit 버튼 클릭시 
+=> galleryTarget.container.style.display = "none";
+스타일 입력
+
+다시 Gallery 버튼 클릭시
+=> galleryTarget.container.style.display = "none";
+효과 유지 이로 인해 버그 발생했건 것. 
+
+수정 
+=> intoGallery 함수에 아래 스타이코드 추가  
+=> galleryTarget.container.style.display = "grid";
+
+Exit버튼 클릭시 none 스타일 부여했고 Gallery버튼 클릭시 해당 none 스타일이 계속 부여되어있어 발생한 문제
+grid속성 추가로 해결
+
+
+alert이 아닌 모달창으로 변경 요청 
+==> 모달 창 생성
+구조
+    1. loader.js 종료
+    2. 모달창 display:block
+    3. 버튼 클릭으로 모달 창 display: none
+모달창 구성
+    1. 굿즈 샵 이동 아이콘 배치
+    2. 갤러리 페이지 이동 아이콘 배치
+    3. Exit 버튼 배치
+        * 위 3가지 버튼 중 어떤 버튼을 눌러도 모달창 display: none
