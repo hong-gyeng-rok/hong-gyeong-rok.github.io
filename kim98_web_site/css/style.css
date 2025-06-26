@@ -42,4 +42,5 @@ h1 {
 
 .style_blur{
     filter: blur(1rem);
+      pointer-events: none; /* 클릭 안되게 막음 */
 }
