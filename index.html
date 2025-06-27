@@ -15,19 +15,9 @@
         <link rel="stylesheet" href="kim98_web_site/css/gallery.css" />
     </head>
     <body>
-    <!-- 스캘레톤 UI-->
-     <section class="loader ">
-        <div class="">
-
-        </div>
-
-     </section>
         <!--팝업 모달창-->
-        <section id="popup_modal" class="popup_modal ">
-            <div class="skeleton_popup_madal">
-
-            </div>
-            <div id="modal_area" class="modal_area modal_area skeleton_popup_madal">
+        <section id="popup_modal" class="popup_modal "> 
+            <div id="modal_area" class="modal_area modal_area ">
                 <!--close 버튼-->
                 <button class=" modal_close">
                     <img src="kim98_web_site/kim98_images/icons_op_0/backwrod_icon.png" alt = "backwrod" class=" icons_size">
@@ -56,7 +46,11 @@
             <!-- 프로필 영역 -->
             <section id="profile" class="profile">
                 <div class="profile_banner">
-                    <div class="banner_img" id="imageBox"></div>
+                    <div class="banner_img" id="imageBox" >
+                        <div class=" skeleton_main">
+
+                        </div>
+                    </div>
                     <div class="profile_icon_wrapper">
                         <img src="kim98_web_site/kim98_images/icons_op_0/profile_icon.png" alt="프로필 아이콘" class="profile_icon" />
                         <p class="profile_name">@kimgupall_98</p>

@@ -11,7 +11,8 @@ let indexRef = { value: 0, count: 0 };
 
 const profile = document.querySelector(".profile");
 const links = document.querySelector(".links");
-const main = document.getElementById("main");
+const main = document.querySelector("#main");
+const skeletonMain = document.querySelector(".skeleton_main");
 
 
 // 이미지 전환 기본 값 세팅
@@ -27,7 +28,7 @@ const popupClose = document.querySelector(".popup_close");
 const popupTarget = { open:popupOpen, close:popupClose, box:popupBox};
 
 // preloder 기본값 세팅
-const loader = document.getElementById("loader");
+const loader = document.querySelector(".loader");
 const totalToLoad = keys.length;
 
 // controlGallery 기본 값 세팅
@@ -64,14 +65,12 @@ const modalTarget = {
   skeleton : modalSkeleton
 }
 
-
-initModal(modalTarget);
-
 // preload 이미지 로드 및 초기화
 const preloadUrls = keys.map((key) => images[key]); // 딕셔너리 => URL 배열
-preloadImage(preloadUrls, indexRef, totalToLoad, loader, main, modalTarget);
-handleLoad(indexRef, totalToLoad, loader, main, modalTarget);
+preloadImage(preloadUrls, indexRef, totalToLoad, skeletonMain);
+handleLoad(indexRef, totalToLoad, skeletonMain);
 
+initModal(modalTarget);
 initGallery();
 
 // 갤러리 이벤트 바인딩

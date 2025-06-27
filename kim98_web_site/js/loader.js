@@ -27,27 +27,26 @@ preloader 기능 구현하기
 //      5-1. 최종값 loding.style.opacity = 0, main.style.oacity = 1;
 //loader.style.display ="flex";
 
+
 //기본값 main 페이지 none
-main.style.display = "none";
+//main.style.display = "none";
+//modalTarget.popupModal.style.display = "none";
+
 //이미지 preload 함수
-export function preloadImage(urls, indexRef, totalToLoad, loader, main, modalTarget) {
-  urls.forEach((url) => {
+export function preloadImage(urls, indexRef, totalToLoad, skeletonMain) {
+  urls.forEach((preloadUrls) => {
     const img = new Image();
-    img.onload = () => handleLoad(indexRef, totalToLoad, loader, main, modalTarget);
-    img.onerror = () => handleLoad(indexRef, totalToLoad, loader, main, modalTarget);
-    img.src = url;
+    img.onload = () => handleLoad(indexRef, totalToLoad, skeletonMain);
+    img.onerror = () => handleLoad(indexRef, totalToLoad, skeletonMain);
+    img.src = preloadUrls;
   });
 }
 
 // 이미지 로딩 다 되면 로딩 페이지 none, 메인페이지 blcok
-export function handleLoad(indexRef, totalToLoad, loader, main, modalTarget){
+export function handleLoad(indexRef, totalToLoad, skeletonMain){
     const count = indexRef.count++;
 
-    modalTarget.skeleton.classList.add("skeleton_popup_madal")
-
-    if(count === totalToLoad){
-        main.style.display = "block";
-        modalTarget.popupModal.style.display = "flex";
-        modalTarget.skeleton.classList.remove("skeleton_popup_madal");
+    if(count=== totalToLoad){
+        skeletonMain.style.display = "none"
     }
 }

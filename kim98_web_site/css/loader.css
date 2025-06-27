@@ -1,5 +1,5 @@
 .loader{
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -9,3 +9,4 @@
     font-size: 5rem;
     font-weight: 300;
 }
+
