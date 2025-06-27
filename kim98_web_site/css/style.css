@@ -45,3 +45,7 @@ h1 {
       pointer-events: none; /* 클릭 안되게 막음 */
       overflow: hidden;
 }
+
+.show{
+        transition: opacity 1.5s ease-in-out;
+}

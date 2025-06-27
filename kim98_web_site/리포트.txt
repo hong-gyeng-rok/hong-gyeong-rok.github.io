@@ -38,4 +38,12 @@ alert이 아닌 모달창으로 변경 요청
 
  => 피드백
     모달창 여백 통일
+        => 수정 완료
+            modal_close에 아래 코드 추가
+                position: absolute;
+                top: 0;
+                right: 0;
     블러처리된 배경 터치 가능, => 링크 이동 가능 해당 건 수정 필요
+        => 수정완료 아래 코드 추가   
+            pointer-events: none; /* 클릭 안되게 막음 */
+            overflow: hidden;

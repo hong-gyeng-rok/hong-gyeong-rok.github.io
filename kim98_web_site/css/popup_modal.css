@@ -8,7 +8,7 @@
 }
 
 
-.modal_area{
+.modal_area, .skeleton_popup_madal{
     width: 50%;
     height: 10rem;
     max-width: 480px;
@@ -16,12 +16,15 @@
     position: absolute;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 1000;
     gap: 1rem;
     background-color: white;
     border-radius: 1rem;
     border: solid 1px;
 }
+
 
 .merch_ment, .gallery_ment{
     display: flex;
@@ -39,8 +42,9 @@
 .modal_close{
     width: 40px;
     height: 40px;
-    position: relative;
-    margin-left: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0);
     border: none;
@@ -54,4 +58,9 @@
 .style_hover:hover{
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+}
+
+.skeleton_popup_madal{
+    z-index: 2000;
+    background-color: black;
 }

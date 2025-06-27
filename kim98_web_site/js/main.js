@@ -51,27 +51,26 @@ const galleryTarget = {
 };
 
 const popupModal = document.querySelector(".popup_modal"); // 팝업 모달 전체 섹션
-
 const modalClose = document.querySelector(".modal_close"); // 모달창 닫기 버튼
-
 const galleryIconModal = document.querySelector(".gallery_icon_modal"); // 모달창에서 갤러리 진입 버튼
-
 const merch = document.querySelector(".merch_icon_modal");
+const modalSkeleton = document.querySelector(".skeleton_popup_madal");
 
 const modalTarget = {
   popupModal: popupModal, // 팝업 모달 전체 섹션
-
   close: modalClose, // 모달창 닫기 버튼
-
   goToGallery: galleryIconModal, // 모달창에서 갤러리 진입 버튼
-
-  merch: merch
+  merch: merch, //굿즈(merch) 아이콘
+  skeleton : modalSkeleton
 }
+
+
+initModal(modalTarget);
 
 // preload 이미지 로드 및 초기화
 const preloadUrls = keys.map((key) => images[key]); // 딕셔너리 => URL 배열
-preloadImage(preloadUrls, indexRef, totalToLoad, loader, main);
-handleLoad(indexRef, totalToLoad, loader, main);
+preloadImage(preloadUrls, indexRef, totalToLoad, loader, main, modalTarget);
+handleLoad(indexRef, totalToLoad, loader, main, modalTarget);
 
 initGallery();
 
@@ -91,7 +90,6 @@ setInterval(() => {
 oppenPopup(popupTarget);
 closePopup(popupTarget);
 
-initModal(modalTarget);
 closeModal(modalTarget);
 goToGalleryFromModal (modalTarget, galleryTarget, links, profile);
 goToMerch (modalTarget);
