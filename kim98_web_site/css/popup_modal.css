@@ -18,7 +18,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 100;
     gap: 1rem;
     background-color: white;
     border-radius: 1rem;
@@ -61,6 +61,6 @@
 }
 
 .skeleton_popup_madal{
-    z-index: 2000;
-    background-color: black;
+    z-index: 1000;
+    background-color: rgba(197, 213, 222, 1);
 }

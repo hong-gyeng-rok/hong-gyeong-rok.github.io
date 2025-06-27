@@ -42,8 +42,10 @@ export function preloadImage(urls, indexRef, totalToLoad, loader, main, modalTar
 // 이미지 로딩 다 되면 로딩 페이지 none, 메인페이지 blcok
 export function handleLoad(indexRef, totalToLoad, loader, main, modalTarget){
     const count = indexRef.count++;
+
+    modalTarget.skeleton.classList.add("skeleton_popup_madal")
+
     if(count === totalToLoad){
-        loader.style.display ="none";
         main.style.display = "block";
         modalTarget.popupModal.style.display = "flex";
         modalTarget.skeleton.classList.remove("skeleton_popup_madal");
