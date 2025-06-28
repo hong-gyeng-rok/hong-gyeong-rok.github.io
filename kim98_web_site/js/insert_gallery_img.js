@@ -22,24 +22,33 @@
 
 import { galleryImages } from "./imageData.js";
 
-function renderSeason(seasonData, containerId, seasonStyle) {
+
+function renderSeason(seasonData, containerId, seasonStyle, skeleton) {
   const container = document.getElementById(containerId);
   container.innerHTML = ""; // 기존 이미지 초기화
-
-  seasonData.forEach(item => {
-    const div = document.createElement("div");
-    div.classList.add("single_img", seasonStyle); // 공통 + 시즌별 클래스
-    div.style.backgroundImage = `url('${item.url}')`;
-    container.appendChild(div);
+  
+  seasonData.forEach(item => {;
+    const img = document.createElement("img");
+    img.classList.add("single_img", seasonStyle ); // 공통 + 시즌별 클래스
+    img.src = item.url;
+    img.loading = "lazy";
+    container.appendChild(img);
   });
   
   const singleImg = document.querySelectorAll(".single_img");
     singleImg.forEach((img, index) => {
+      /*
+      const newDiv = document.createElement("div");
+      newDiv.classList.add("skeleton_img");
+      img.appendChild(newDiv);
+      */
+      img.onload = () =>removeSkeleton(); 
       setTimeout(() => {
         img.classList.add("show");
       }, index * 100); // 순차적으로 페이드 인
-});
+    });
 
+  
 }
 
 function handleSeasonChange() {
@@ -50,9 +59,6 @@ function handleSeasonChange() {
   renderSeason(seasonData, "gallery_container", seasonStyle);
 }
 
-
-
-
 export function initGallery() {
   const select = document.getElementById("seasonSelect");
   select.value = "25year-25S/S"; 
@@ -60,3 +66,10 @@ export function initGallery() {
   select.addEventListener("change", handleSeasonChange);
 }
 
+function removeSkeleton() {
+  const skeletonImg = document.querySelectorAll(".skeleton_img");
+  skeletonImg.forEach(parent => {
+      parent.classList.remove("skeleton_img")
+  });
+
+}

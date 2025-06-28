@@ -12,7 +12,17 @@ let indexRef = { value: 0, count: 0 };
 const profile = document.querySelector(".profile");
 const links = document.querySelector(".links");
 const main = document.querySelector("#main");
+
+
+
+// 스켈레톤 UI 클레스
 const skeletonMain = document.querySelector(".skeleton_main");
+//const skeletonImg = document.querySelectorAll(".skeleton_img");
+
+const skeleton = {
+  main : skeletonMain, // 메인 페에지 => 베너 이미지 용
+//  img : skeletonImg // 전시회 페이지 => 개별 이미지 용
+}
 
 
 // 이미지 전환 기본 값 세팅
@@ -67,8 +77,8 @@ const modalTarget = {
 
 // preload 이미지 로드 및 초기화
 const preloadUrls = keys.map((key) => images[key]); // 딕셔너리 => URL 배열
-preloadImage(preloadUrls, indexRef, totalToLoad, skeletonMain);
-handleLoad(indexRef, totalToLoad, skeletonMain);
+preloadImage(preloadUrls, indexRef, totalToLoad, skeleton);
+handleLoad(indexRef, totalToLoad, skeleton);
 
 initModal(modalTarget);
 initGallery();

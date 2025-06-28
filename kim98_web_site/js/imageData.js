@@ -231,17 +231,18 @@ export const galleryImages = {
         group: "개인작품",
         url: "kim98_web_site/kim98_images/kimgupall/24/24fw/레서판다3.jpg",
         title: "레서판다_판다"
-      }
-    ]
-  },
-  "25year" : {
-    "25S/S" : [
+      },
       {id: "img35", 
         season: "24F/W",
         group: "개인작품",
         url: "kim98_web_site/kim98_images/kimgupall/24/24fw/gd.jpg",
         title: "GD"
-      },
+      }
+    ]
+  },
+  "25year" : {
+    "25S/S" : [
+      
      {id: "img36", 
         season: "25S/S",
         group: "전시회작",

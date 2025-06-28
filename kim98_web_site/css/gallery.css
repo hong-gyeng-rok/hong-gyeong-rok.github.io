@@ -109,9 +109,11 @@
 }
 
 .single_img{
+    position: relative;
     aspect-ratio: 3 / 4;
     width: 100%; 
-    /* max, min width 설절*/
+    min-width: 80px;
+    max-width: 100px;
     object-fit: cover;
     background-size: cover;
     background-position: center;

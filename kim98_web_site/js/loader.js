@@ -43,10 +43,10 @@ export function preloadImage(urls, indexRef, totalToLoad, skeletonMain) {
 }
 
 // 이미지 로딩 다 되면 로딩 페이지 none, 메인페이지 blcok
-export function handleLoad(indexRef, totalToLoad, skeletonMain){
+export function handleLoad(indexRef, totalToLoad, skeleton){
     const count = indexRef.count++;
 
     if(count=== totalToLoad){
-        skeletonMain.style.display = "none"
+        skeleton.main.style.display = "none"
     }
 }
