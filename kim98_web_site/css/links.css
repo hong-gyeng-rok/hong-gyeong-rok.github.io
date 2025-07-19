@@ -23,7 +23,10 @@
     margin-bottom: 1rem;
 }
 
-.subs_icon, .about_icon, .about_btn, .gallery_icon{
+.subs_icon,
+.about_icon,
+.about_btn,
+.gallery_icon {
     width: 30px;
     height: 30px;
 }
@@ -53,7 +56,7 @@
     position: relative;
 }
 
-.bar_style:hover{
+.bar_style:hover {
     opacity: 0.5;
 }
 
@@ -68,8 +71,10 @@
     left: 0;
     margin-left: 1rem;
 }
+
 /* 링크 텍스트 */
-.bar_text, .popup_box {
+.bar_text,
+.popup_box {
     color: white;
     text-decoration: none;
     font-size: 1rem;
@@ -95,14 +100,14 @@
     background-color: #98BEFF;
 }
 
-#about_popup{
+#about_popup {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.about_btn{
+.about_btn {
     background-color: rgba(0, 0, 0, 0);
     box-shadow: none;
     border: none;
@@ -145,7 +150,7 @@
     white-space: normal !important;
 }
 
-.backwrod_icon{
+.backwrod_icon {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -161,7 +166,7 @@
     font-size: 1rem;
 }
 
-.gallery_icon{
+.gallery_icon {
     display: flex;
     flex-direction: column;
     justify-content: center;

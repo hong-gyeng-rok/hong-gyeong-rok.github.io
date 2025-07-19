@@ -47,3 +47,14 @@ alert이 아닌 모달창으로 변경 요청
         => 수정완료 아래 코드 추가   
             pointer-events: none; /* 클릭 안되게 막음 */
             overflow: hidden;
+
+갤러리 패이지 lazy-loading 추가 
+    => 기존 div 생성 후 bakcgroung에 img 삽입하는 방식이 아닌 img 태그 삽입 후 loading="lazy" 속성 부여하는 방식으로 변경
+
+
+갤러리 페이지의 슬라이더 이미지들이 레이아웃이 깨지고 이미지 크기가 예상보다 작게 표시되는 문제 발생 
+    => `slierImg` CSS 스타일에 `min-width`와 `max-width` 속성 삭제
+        why?
+            =>   aspect-ratio: 3 / 4; 속성을 사용하면 가능한 최대 크기의 이미지로 표시되지만 max-width 설정으로 인해 최대 이미지 크기 제한됨
+                이로 인해 레이아웃이 깨지고 width 50rem을 기준으로 3:4 비율이 적용되어 전체적인 이미지 크기 축소되어 표시됨
+                max-width, min-width 제거로 가로폭 한계를 없애어 페이지 가능한 큰 사이즈의 이미지 표시되도록 수정
