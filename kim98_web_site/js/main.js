@@ -38,6 +38,6 @@ oppenPopup(popupTarget); // popupBox open
 closePopup(popupTarget); // popupBox close
 
 //loder 함수
-//const preloadUrls = keys.map((key) => images[key]); // 딕셔너리 → URL 배열
-//preloadImage(preloadUrls, indexRef, totalToLoad, loader, main); // 인자 통합 방식으로
-//handleLoad(indexRef, totalToLoad, loader, main);
+const preloadUrls = keys.map((key) => images[key]); // 딕셔너리 → URL 배열
+preloadImage(preloadUrls, indexRef, totalToLoad, loader, main); // 인자 통합 방식으로
+handleLoad(indexRef, totalToLoad, loader, main);
