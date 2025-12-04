@@ -3,7 +3,7 @@ import {classAddStyleGrid} from "./controlGallery.js";
 
 export function initModal (modalTarget){
     main.classList.remove("style_blur");
-    popupModal.style.display = "none";
+    modalTarget.popupModal.style.display = "none";
 }
 
 export function closeModal (modalTarget){
